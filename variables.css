@@ -1,0 +1,111 @@
+/* ============================================================
+   variables.css — Design System Tokens
+   All CSS custom properties for the entire site live here.
+   ============================================================ */
+
+:root {
+  /* ── Brand Palette ── */
+  --blue-pale:    #E3F2FD;
+  --blue-light:   #90CAF9;
+  --blue:         #2196F3;
+  --blue-deep:    #0D47A1;
+  --navy:         #112E81;
+  --violet:       #4647AE;
+  --blue-mid:     #4382DF;
+
+  /* ── Dark-mode background layers (default) ── */
+  --bg-primary:   #080c18;
+  --bg-secondary: #0d1225;
+  --bg-card:      rgba(13, 20, 50, 0.55);
+  --bg-glass:     rgba(255, 255, 255, 0.04);
+  --bg-glass-hover: rgba(255, 255, 255, 0.08);
+
+  /* ── Text ── */
+  --text-primary:   #f0f4ff;
+  --text-secondary: #a8b8d8;
+  --text-muted:     #6a7fa8;
+
+  /* ── Gradient Stops ── */
+  --gradient-main:   linear-gradient(135deg, var(--blue) 0%, var(--violet) 100%);
+  --gradient-card:   linear-gradient(135deg, rgba(33,150,243,0.15) 0%, rgba(70,71,174,0.15) 100%);
+  --gradient-hero:   linear-gradient(135deg, var(--navy) 0%, var(--violet) 50%, var(--blue-deep) 100%);
+
+  /* ── Glow / Shadow ── */
+  --glow-blue:   0 0 24px rgba(33, 150, 243, 0.45);
+  --glow-violet: 0 0 24px rgba(70, 71, 174, 0.45);
+  --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.45);
+  --shadow-btn:  0 4px 20px rgba(33, 150, 243, 0.40);
+
+  /* ── Border ── */
+  --border-glass: 1px solid rgba(255, 255, 255, 0.10);
+  --border-accent: 1px solid rgba(33, 150, 243, 0.35);
+  --radius-sm:  8px;
+  --radius-md:  16px;
+  --radius-lg:  24px;
+  --radius-xl:  40px;
+  --radius-full: 9999px;
+
+  /* ── Spacing Scale ── */
+  --space-xs:  0.25rem;   /* 4px  */
+  --space-sm:  0.5rem;    /* 8px  */
+  --space-md:  1rem;      /* 16px */
+  --space-lg:  1.5rem;    /* 24px */
+  --space-xl:  2.5rem;    /* 40px */
+  --space-2xl: 4rem;      /* 64px */
+  --space-3xl: 6rem;      /* 96px */
+
+  /* ── Typography ── */
+  --font-sans:  'Inter', 'Segoe UI', system-ui, sans-serif;
+  --font-display: 'Outfit', 'Inter', sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
+
+  --text-xs:   0.75rem;
+  --text-sm:   0.875rem;
+  --text-base: 1rem;
+  --text-lg:   1.125rem;
+  --text-xl:   1.25rem;
+  --text-2xl:  1.5rem;
+  --text-3xl:  1.875rem;
+  --text-4xl:  2.5rem;
+  --text-5xl:  3.5rem;
+  --text-6xl:  4.5rem;
+
+  --weight-normal:   400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-black:    900;
+
+  /* ── Transitions ── */
+  --transition-fast:   150ms ease;
+  --transition-base:   300ms ease;
+  --transition-slow:   500ms ease;
+  --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Z-Index layers ── */
+  --z-stars:   -1;
+  --z-base:    1;
+  --z-card:    10;
+  --z-nav:     100;
+  --z-cursor:  200;
+  --z-loader:  9999;
+
+  /* ── Navbar height (used for scroll offset) ── */
+  --navbar-height: 70px;
+}
+
+/* ── Light Mode Overrides ── */
+[data-theme="light"] {
+  --bg-primary:   #f5f8ff;
+  --bg-secondary: #eaf0fb;
+  --bg-card:      rgba(255, 255, 255, 0.75);
+  --bg-glass:     rgba(255, 255, 255, 0.60);
+  --bg-glass-hover: rgba(255, 255, 255, 0.85);
+
+  --text-primary:   #0d1225;
+  --text-secondary: #2d3a5a;
+  --text-muted:     #5a6a8a;
+
+  --border-glass:  1px solid rgba(33, 150, 243, 0.18);
+  --shadow-card:   0 8px 32px rgba(33, 150, 243, 0.12);
+}

@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- ============================================================
+       Ahmed Samy Portfolio — index.html
+       Android Mobile App Developer
+       ============================================================ -->
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <!-- ── SEO ── -->
+  <title>Ahmed Samy | Android Mobile App Developer &amp; Technical Support Specialist</title>
+  <meta name="description" content="Ahmed Samy — Technical Support and Operations professional &amp; Android Mobile App Developer with 3+ years experience in telecommunications at Telecom Egypt (WE)." />
+  <meta name="keywords" content="Ahmed Samy, Telecom Egypt, Technical Support, Quality Monitoring, Operations, Android Developer, Nasr City Cairo" />
+  <meta name="author" content="Ahmed Samy" />
+
+  <!-- ── Open Graph ── -->
+  <meta property="og:title"       content="Ahmed Samy | Portfolio" />
+  <meta property="og:description" content="Technical Support &amp; Operations Specialist | Android Mobile App Developer" />
+  <meta property="og:type"        content="website" />
+
+  <!-- ── Preconnect for Google Fonts ── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- ── Icons (Font Awesome CDN) ── -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- ── CSS Files (load order matters) ── -->
+  <link rel="stylesheet" href="assets/css/variables.css" />
+  <link rel="stylesheet" href="assets/css/base.css" />
+  <link rel="stylesheet" href="assets/css/navbar.css" />
+  <link rel="stylesheet" href="assets/css/hero.css" />
+  <link rel="stylesheet" href="assets/css/about.css" />
+  <link rel="stylesheet" href="assets/css/education.css" />
+  <link rel="stylesheet" href="assets/css/experience.css" />
+  <link rel="stylesheet" href="assets/css/skills.css" />
+  <link rel="stylesheet" href="assets/css/projects.css" />
+  <link rel="stylesheet" href="assets/css/testimonials.css" />
+  <link rel="stylesheet" href="assets/css/services.css" />
+  <link rel="stylesheet" href="assets/css/contact.css" />
+  <link rel="stylesheet" href="assets/css/footer.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ════════════════════════════════════════════════════════════
+       LOADING SCREEN
+       ════════════════════════════════════════════════════════════ -->
+  <div id="loader" role="status" aria-label="Loading portfolio">
+    <div class="loader-logo">AS</div>
+    <div class="loader-bar-wrap">
+      <div class="loader-bar" id="loader-bar"></div>
+    </div>
+  </div>
+
+  <!-- ════════════════════════════════════════════════════════════
+       ANIMATED STAR BACKGROUND
+       ════════════════════════════════════════════════════════════ -->
+  <canvas id="stars-canvas" aria-hidden="true"></canvas>
+
+  <!-- ════════════════════════════════════════════════════════════
+       CUSTOM CURSOR
+       ════════════════════════════════════════════════════════════ -->
+  <div class="cursor-dot"  aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ════════════════════════════════════════════════════════════
+       NAVIGATION
+       ════════════════════════════════════════════════════════════ -->
+  <header id="navbar" class="navbar" role="banner">
+    <div class="container">
+
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Ahmed Samy — Home">
+        Ahmed <span>Samy</span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <nav class="nav-links" role="navigation" aria-label="Main navigation">
+        <a href="#home"         class="nav-link active">Home</a>
+        <a href="#about"        class="nav-link">About</a>
+        <a href="#education"    class="nav-link">Education</a>
+        <a href="#experience"   class="nav-link">Experience</a>
+        <a href="#skills"       class="nav-link">Skills</a>
+        <a href="#projects"     class="nav-link">Projects</a>
+        <a href="#testimonials" class="nav-link">Reviews</a>
+        <a href="#services"     class="nav-link">Services</a>
+        <a href="#contact"      class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Actions -->
+      <div class="nav-actions">
+        <button id="theme-toggle-btn" class="theme-toggle" aria-label="Toggle dark/light mode">
+          <span id="theme-icon">🌙</span>
+        </button>
+        <button id="hamburger" class="hamburger" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile navigation drawer -->
+  <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile navigation" aria-hidden="true">
+    <a href="#home"         class="nav-link">🏠 Home</a>
+    <a href="#about"        class="nav-link">👤 About</a>
+    <a href="#education"    class="nav-link">🎓 Education</a>
+    <a href="#experience"   class="nav-link">💼 Experience</a>
+    <a href="#skills"       class="nav-link">⚡ Skills</a>
+    <a href="#projects"     class="nav-link">🚀 Projects</a>
+    <a href="#testimonials" class="nav-link">💬 Reviews</a>
+    <a href="#services"     class="nav-link">🛠️ Services</a>
+    <a href="#contact"      class="nav-link">📧 Contact</a>
+  </nav>
+
+  <!-- ════════════════════════════════════════════════════════════
+       MAIN CONTENT
+       ════════════════════════════════════════════════════════════ -->
+  <main>
+
+    <!-- ── SECTION 1: HERO ─────────────────────────────────── -->
+    <section id="home" class="section" aria-label="Hero introduction">
+      <div class="container">
+        <div class="hero-inner">
+
+          <!-- Left: Text -->
+          <div class="hero-content">
+            <p class="hero-greeting">Hello, I'm</p>
+
+            <h1 class="hero-name">
+              <span class="highlight">Ahmed</span> Samy
+            </h1>
+
+            <div class="hero-roles-wrap" aria-live="polite" aria-atomic="true">
+              <span class="hero-roles-prefix">I'm a </span>
+              <span id="typing-text" class="typing-text"></span>
+              <span class="typing-cursor" aria-hidden="true"></span>
+            </div>
+
+            <span class="hero-tagline">Android Mobile App Developer &amp; Technical Support Specialist</span>
+
+            <p class="hero-bio">
+              Technical Support and Operations professional with 3+ years of experience in telecommunications,
+              technical troubleshooting, quality monitoring, and team leadership, alongside a strong focus on
+              Android Mobile App Development.
+            </p>
+
+            <!-- CTA Buttons -->
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary" aria-label="View my projects">
+                <i class="fa-solid fa-rocket" aria-hidden="true"></i> View Projects
+              </a>
+              <a href="#contact" class="btn btn-outline" aria-label="Get in touch">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contact Me
+              </a>
+            </div>
+
+            <!-- Social Links -->
+            <div class="hero-socials" aria-label="Social media links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:ahmedsamygamal6@gmail.com" aria-label="Send email to Ahmed">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+              <a href="tel:+201208901836" aria-label="Call Ahmed">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </a>
+              <a href="https://wa.me/201208901836" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="hero-stats" aria-label="Quick statistics">
+              <div class="hero-stat">
+                <span class="hero-stat-num">3+</span>
+                <span class="hero-stat-label">Years Exp.</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-num">WE</span>
+                <span class="hero-stat-label">Telecom Egypt</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-num">2023</span>
+                <span class="hero-stat-label">B.A. Degree</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Profile Photo -->
+          <div class="hero-image-wrap" aria-hidden="true">
+            <div class="hero-photo-frame avatar-inner">
+              <img src="assets/images/pro.jpg.png" alt="Ahmed Samy profile photo" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Scroll hint -->
+      <a href="#about" id="scroll-hint" class="hero-scroll-hint" aria-label="Scroll down to about section">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+        Scroll
+      </a>
+    </section>
+
+
+    <!-- ── SECTION 2: ABOUT ────────────────────────────────── -->
+    <section id="about" class="section" aria-label="About Ahmed Samy">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Who I Am</span>
+          <h2 class="section-title">About Me</h2>
+          <p class="section-subtitle">Technical Support &amp; Operations Specialist | Android Mobile App Developer</p>
+        </div>
+
+        <div class="about-grid">
+
+          <!-- Image -->
+          <div class="about-image-wrap reveal-left about-photo">
+            <div class="about-dots" aria-hidden="true"></div>
+            <div class="about-image-frame circle">
+              <img src="assets/images/ahmed.jpg.jpg" alt="Ahmed Samy" style="width:100%; height:100%; object-fit:cover;">
+            </div>
+            <div class="about-badge" aria-label="3 plus years of experience">
+              <span class="about-badge-num">3+</span>
+              <span class="about-badge-label">Years of Experience</span>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="about-content reveal-right">
+            <p class="about-intro">
+              Hi! I'm <span>Ahmed Samy</span>, a Technical Support &amp; Operations professional and Android Mobile App Developer based in Nasr City, Cairo.
+            </p>
+
+            <p class="about-text">
+              Technical Support and Operations professional with 3+ years of experience in telecommunications, technical troubleshooting, customer operations, quality monitoring, coaching, KPI tracking, and team leadership. Experienced in ADSL, VDSL and FTTH support, case management, performance follow-up, and cross-functional coordination. Holds a Bachelor's Degree in Mass Communication – Journalism, Radio &amp; Television.
+            </p>
+
+            <!-- Info grid -->
+            <div class="about-info-grid">
+              <div class="about-info-item">
+                <span class="about-info-label">Name</span>
+                <span class="about-info-value">Ahmed Samy</span>
+              </div>
+              <div class="about-info-item">
+                <span class="about-info-label">Role</span>
+                <span class="about-info-value">Tech Support &amp; Android Developer</span>
+              </div>
+              <div class="about-info-item">
+                <span class="about-info-label">Location</span>
+                <span class="about-info-value">Nasr City, Cairo 🇪🇬</span>
+              </div>
+              <div class="about-info-item">
+                <span class="about-info-label">Languages</span>
+                <span class="about-info-value">Arabic (Native), English</span>
+              </div>
+              <div class="about-info-item">
+                <span class="about-info-label">Email</span>
+                <span class="about-info-value">
+                  <a href="mailto:ahmedsamygamal6@gmail.com">ahmedsamygamal6@gmail.com</a>
+                </span>
+              </div>
+              <div class="about-info-item">
+                <span class="about-info-label">Phone</span>
+                <span class="about-info-value">
+                  <a href="tel:+201208901836">(+20) 01208901836</a>
+                </span>
+              </div>
+            </div>
+
+            <!-- Availability -->
+            <div class="about-available" aria-label="Currently available for work">
+              <span class="about-available-dot" aria-hidden="true"></span>
+              <span class="about-available-text">Available for new opportunities</span>
+            </div>
+
+            <!-- CTA -->
+            <a href="#contact" class="btn btn-primary" style="width:fit-content;">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Contact Me
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── SECTION 3: EDUCATION ────────────────────────────── -->
+    <section id="education" class="section" aria-label="Educational background">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">My Background</span>
+          <h2 class="section-title">Education &amp; Training</h2>
+          <p class="section-subtitle">Academic degree and professional development courses.</p>
+        </div>
+
+        <div class="edu-timeline" role="list">
+
+          <!-- Entry 1: Degree -->
+          <article class="edu-item reveal" role="listitem" data-delay="0">
+            <div class="edu-icon" aria-hidden="true">🎓</div>
+            <div class="edu-card glass-card">
+              <h3 class="edu-degree">Bachelor's Degree in Mass Communication</h3>
+              <p class="edu-institution">Journalism, Radio &amp; Television</p>
+              <div class="edu-meta">
+                <span class="edu-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                  Egypt
+                </span>
+                <span class="edu-meta-item">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  Graduated 2023
+                </span>
+                <span class="badge">Bachelor's Degree</span>
+              </div>
+              <p class="edu-desc">
+                Specialised in Journalism, Radio &amp; Television with focus on media writing, presentation, effective communication, and team leadership.
+              </p>
+            </div>
+          </article>
+
+          <!-- Entry 2: English Course -->
+          <article class="edu-item reveal" role="listitem" data-delay="100">
+            <div class="edu-icon" aria-hidden="true">🌐</div>
+            <div class="edu-card glass-card">
+              <h3 class="edu-degree">English Language Course</h3>
+              <p class="edu-institution">Arabi Institute (Armed Forces)</p>
+              <div class="edu-meta">
+                <span class="badge">Course &amp; Training</span>
+              </div>
+              <p class="edu-desc">
+                Intensive English language training covering professional, technical, and spoken communication skills.
+              </p>
+            </div>
+          </article>
+
+          <!-- Entry 3: IT & Tech Support -->
+          <article class="edu-item reveal" role="listitem" data-delay="200">
+            <div class="edu-icon" aria-hidden="true">🖥️</div>
+            <div class="edu-card glass-card">
+              <h3 class="edu-degree">IT &amp; Technical Support Basics</h3>
+              <p class="edu-institution">Technical Support Training</p>
+              <div class="edu-meta">
+                <span class="badge">Course &amp; Training</span>
+              </div>
+              <p class="edu-desc">
+                Fundamental technical support concepts, network configurations (ADSL, VDSL, FTTH), router setups, and troubleshooting workflows.
+              </p>
+            </div>
+          </article>
+
+          <!-- Entry 4: MS Excel & Word -->
+          <article class="edu-item reveal" role="listitem" data-delay="300">
+            <div class="edu-icon" aria-hidden="true">📊</div>
+            <div class="edu-card glass-card">
+              <h3 class="edu-degree">Microsoft Excel &amp; Word Basics</h3>
+              <p class="edu-institution">Office Productivity Training</p>
+              <div class="edu-meta">
+                <span class="badge">Course &amp; Training</span>
+              </div>
+              <p class="edu-desc">
+                Essentials of data entry, spreadsheet management, reporting, documentation, and office administration.
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── SECTION 4: EXPERIENCE ───────────────────────────── -->
+    <section id="experience" class="section" aria-label="Work experience">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">My Journey</span>
+          <h2 class="section-title">Experience</h2>
+          <p class="section-subtitle">Roles and responsibilities in telecommunications, quality monitoring, and team leadership.</p>
+        </div>
+
+        <div class="exp-timeline" role="list">
+
+          <!-- Job 1 -->
+          <article class="exp-item reveal" role="listitem">
+            <div class="exp-card glass-card">
+              <h3 class="exp-role">Quality / Coaching / Team Leadership</h3>
+              <p class="exp-company">Telecom Egypt (WE)</p>
+              <div class="exp-meta">
+                <span class="exp-meta-tag">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  2025 – Present
+                </span>
+                <span class="badge">Full-time</span>
+              </div>
+              <ul class="exp-bullets" aria-label="Key responsibilities">
+                <li>Conduct quality reviews and identify performance gaps.</li>
+                <li>Provide coaching and actionable feedback to improve agent performance.</li>
+                <li>Monitor individual and team KPIs against operational targets.</li>
+                <li>Support team guidance, follow-up and escalation handling.</li>
+                <li>Contribute to quality and performance improvement initiatives.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="badge">Quality Monitoring</span>
+                <span class="badge">Coaching</span>
+                <span class="badge">KPI Tracking</span>
+                <span class="badge">Team Leadership</span>
+                <span class="badge">Escalation Handling</span>
+              </div>
+            </div>
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-empty" aria-hidden="true"></div>
+          </article>
+
+          <!-- Job 2 -->
+          <article class="exp-item reveal" data-delay="100" role="listitem">
+            <div class="exp-empty" aria-hidden="true"></div>
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-card glass-card">
+              <h3 class="exp-role">Digital Support / Technical Support Specialist</h3>
+              <p class="exp-company">Telecom Egypt (WE)</p>
+              <div class="exp-meta">
+                <span class="exp-meta-tag">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                  2023 – 2025
+                </span>
+                <span class="badge">Full-time</span>
+              </div>
+              <ul class="exp-bullets" aria-label="Key responsibilities">
+                <li>Provide technical support for ADSL, VDSL and FTTH services.</li>
+                <li>Troubleshoot connectivity, router, configuration and service-related issues.</li>
+                <li>Analyze cases and identify appropriate troubleshooting or escalation paths.</li>
+                <li>Coordinate with technical and operational teams on complex cases.</li>
+                <li>Maintain accurate case documentation and follow-up.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="badge">ADSL / VDSL / FTTH</span>
+                <span class="badge">Technical Support</span>
+                <span class="badge">Troubleshooting</span>
+                <span class="badge">Case Management</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Job 3 -->
+          <article class="exp-item reveal" data-delay="200" role="listitem">
+            <div class="exp-card glass-card">
+              <h3 class="exp-role">Educational Media Teacher – Journalism &amp; Radio</h3>
+              <p class="exp-company">Educational Media</p>
+              <div class="exp-meta">
+                <span class="badge">Media &amp; Education</span>
+              </div>
+              <ul class="exp-bullets" aria-label="Key responsibilities">
+                <li>Delivered practical sessions in Journalism and Radio.</li>
+                <li>Guided students in writing, presentation, communication and teamwork.</li>
+              </ul>
+              <div class="exp-tags">
+                <span class="badge">Journalism</span>
+                <span class="badge">Radio &amp; TV</span>
+                <span class="badge">Communication</span>
+                <span class="badge">Teamwork</span>
+              </div>
+            </div>
+            <div class="exp-dot" aria-hidden="true"></div>
+            <div class="exp-empty" aria-hidden="true"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── SECTION 5: SKILLS ───────────────────────────────── -->
+    <section id="skills" class="section" aria-label="Technical and operational skills">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What I Bring</span>
+          <h2 class="section-title">Skills &amp; Expertise</h2>
+          <p class="section-subtitle">Technical support, operational coordination, telecommunications, and Android development.</p>
+        </div>
+
+        <!-- Real Skills Grid -->
+        <div class="skills-soft reveal" style="margin-bottom: 2.5rem;">
+          <h3 class="skills-soft-title">Key Competencies &amp; Operations</h3>
+          <div class="skills-soft-grid" aria-label="Skills list">
+            <span class="skills-soft-tag">Operations Coordination</span>
+            <span class="skills-soft-tag">Administrative Support</span>
+            <span class="skills-soft-tag">Back Office Operations</span>
+            <span class="skills-soft-tag">Data Entry &amp; Record Management</span>
+            <span class="skills-soft-tag">Customer &amp; Client Support</span>
+            <span class="skills-soft-tag">Issue Resolution</span>
+            <span class="skills-soft-tag">Case &amp; Request Management</span>
+            <span class="skills-soft-tag">Documentation</span>
+            <span class="skills-soft-tag">Reporting &amp; Data Handling</span>
+            <span class="skills-soft-tag">Internal Communication</span>
+            <span class="skills-soft-tag">Process Follow-up</span>
+            <span class="skills-soft-tag">Microsoft Office</span>
+            <span class="skills-soft-tag">Digital Systems &amp; CRM</span>
+            <span class="skills-soft-tag">English &amp; Arabic Communication</span>
+            <span class="skills-soft-tag">ADSL / VDSL / FTTH Support</span>
+            <span class="skills-soft-tag">Quality &amp; Coaching</span>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Left: Progress bars -->
+          <div class="reveal-left">
+            <h3 class="skills-bars-title">Core Proficiency</h3>
+            <div class="skill-bars">
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span class="skill-bar-name"><span class="skill-emoji">🌐</span> ADSL / VDSL / FTTH Support</span>
+                  <span class="skill-bar-pct">95%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="95" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100" aria-label="Broadband support 95%"></div></div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span class="skill-bar-name"><span class="skill-emoji">🎯</span> Quality Review &amp; Coaching</span>
+                  <span class="skill-bar-pct">90%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="Quality & coaching 90%"></div></div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span class="skill-bar-name"><span class="skill-emoji">📋</span> Case &amp; Request Management</span>
+                  <span class="skill-bar-pct">92%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="92" role="progressbar" aria-valuenow="92" aria-valuemin="0" aria-valuemax="100" aria-label="Case management 92%"></div></div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span class="skill-bar-name"><span class="skill-emoji">🤖</span> Android Mobile Development</span>
+                  <span class="skill-bar-pct">85%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="85" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" aria-label="Android development 85%"></div></div>
+              </div>
+
+              <div class="skill-bar-item">
+                <div class="skill-bar-header">
+                  <span class="skill-bar-name"><span class="skill-emoji">📊</span> Data Handling &amp; MS Office</span>
+                  <span class="skill-bar-pct">90%</span>
+                </div>
+                <div class="skill-bar-track"><div class="skill-bar-fill" data-pct="90" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" aria-label="MS Office & Data 90%"></div></div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right: Tech icon cards -->
+          <div class="reveal-right">
+            <h3 class="skills-icons-title">Toolbox &amp; Systems</h3>
+            <div class="skills-icon-grid" role="list">
+              <div class="skill-icon-card glass-card" role="listitem" aria-label="Digital Systems and CRM">
+                <span class="skill-icon-emoji">💻</span>
+                <span class="skill-icon-label">CRM Systems</span>
+              </div>
+              <div class="skill-icon-card glass-card" role="listitem" aria-label="Microsoft Office">
+                <span class="skill-icon-emoji">📊</span>
+                <span class="skill-icon-label">MS Office</span>
+              </div>
+              <div class="skill-icon-card glass-card" role="listitem" aria-label="Broadband Support">
+                <span class="skill-icon-emoji">📡</span>
+                <span class="skill-icon-label">FTTH / VDSL</span>
+              </div>
+              <div class="skill-icon-card glass-card" role="listitem" aria-label="Kotlin">
+                <span class="skill-icon-emoji">🎯</span>
+                <span class="skill-icon-label">Kotlin</span>
+              </div>
+              <div class="skill-icon-card glass-card" role="listitem" aria-label="Java">
+                <span class="skill-icon-emoji">☕</span>
+                <span class="skill-icon-label">Java</span>
+              </div>
+              <div class="skill-icon-card glass-card" role="listitem" aria-label="Android Studio">
+                <span class="skill-icon-emoji">🤖</span>
+                <span class="skill-icon-label">Android Studio</span>
+              </div>
+              <div class="skill-icon-card glass-card" role="listitem" aria-label="Documentation">
+                <span class="skill-icon-emoji">📄</span>
+                <span class="skill-icon-label">Documentation</span>
+              </div>
+              <div class="skill-icon-card glass-card" role="listitem" aria-label="Reporting">
+                <span class="skill-icon-emoji">📈</span>
+                <span class="skill-icon-label">KPI Tracking</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ── SECTION 6: PROJECTS ─────────────────────────────── -->
+    <section id="projects" class="section" aria-label="Portfolio projects">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">My Work</span>
+          <h2 class="section-title">Projects</h2>
+          <p class="section-subtitle">A selection of Android apps I've built with passion and precision.</p>
+        </div>
+
+        <!-- Filter buttons -->
+        <div class="projects-filters" role="group" aria-label="Filter projects by category">
+          <button class="filter-btn active" data-filter="all" id="filter-all">All</button>
+          <button class="filter-btn" data-filter="android" id="filter-android">Android</button>
+          <button class="filter-btn" data-filter="kotlin" id="filter-kotlin">Kotlin</button>
+          <button class="filter-btn" data-filter="java" id="filter-java">Java</button>
+        </div>
+
+        <!-- Projects grid -->
+        <div class="projects-grid" id="projects-grid" role="list">
+
+          <!-- Project 1 -->
+          <article class="project-card glass-card reveal" data-category="android kotlin" data-delay="0" role="listitem">
+            <div class="project-thumb">
+              <img
+                src="assets/images/projects/project1.jpg"
+                alt="E-Commerce Android App — product listing and cart screens"
+                loading="lazy"
+              />
+              <div class="project-overlay" aria-hidden="true">
+                <a href="#" class="project-overlay-btn" aria-label="View live demo of E-Commerce App">
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" aria-label="View source code on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <span class="project-category-badge">Android</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">E-Commerce App</h3>
+              <p class="project-desc">
+                A full-featured shopping app with product listings, cart management,
+                Firebase Auth, and Stripe payment integration. Built with MVVM and Kotlin Coroutines.
+              </p>
+              <div class="project-tech-tags">
+                <span class="badge">Kotlin</span>
+                <span class="badge">MVVM</span>
+                <span class="badge">Firebase</span>
+                <span class="badge">Retrofit</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card glass-card reveal" data-category="android kotlin" data-delay="100" role="listitem">
+            <div class="project-thumb">
+              <img
+                src="assets/images/projects/project2.jpg"
+                alt="Chat Messenger Android App — real-time conversation screen"
+                loading="lazy"
+              />
+              <div class="project-overlay" aria-hidden="true">
+                <a href="#" class="project-overlay-btn" aria-label="View live demo of Chat Messenger App">
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" aria-label="View source code on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <span class="project-category-badge">Kotlin</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Chat Messenger App</h3>
+              <p class="project-desc">
+                Real-time messaging app with Firebase Firestore, push notifications via FCM,
+                image sharing, and offline message queue using Room Database.
+              </p>
+              <div class="project-tech-tags">
+                <span class="badge">Kotlin</span>
+                <span class="badge">Firebase</span>
+                <span class="badge">FCM</span>
+                <span class="badge">Room</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card glass-card reveal" data-category="android java" data-delay="200" role="listitem">
+            <div class="project-thumb">
+              <img
+                src="assets/images/projects/project3.jpg"
+                alt="Fitness Tracker Android App — dashboard with step count and heart rate charts"
+                loading="lazy"
+              />
+              <div class="project-overlay" aria-hidden="true">
+                <a href="#" class="project-overlay-btn" aria-label="View live demo of Fitness Tracker App">
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" aria-label="View source code on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <span class="project-category-badge">Java</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">Fitness Tracker App</h3>
+              <p class="project-desc">
+                Health &amp; fitness app tracking steps, calories, and workouts. Uses Android Sensor API,
+                MPAndroidChart for visualisation, and Room for local storage.
+              </p>
+              <div class="project-tech-tags">
+                <span class="badge">Java</span>
+                <span class="badge">Sensor API</span>
+                <span class="badge">Room</span>
+                <span class="badge">Charts</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card glass-card reveal" data-category="android kotlin" data-delay="300" role="listitem">
+            <div class="project-thumb">
+              <img
+                src="assets/images/projects/project4.jpg"
+                alt="News Reader Android App — personalised news feed with category filters"
+                loading="lazy"
+              />
+              <div class="project-overlay" aria-hidden="true">
+                <a href="#" class="project-overlay-btn" aria-label="View live demo of News Reader App">
+                  <i class="fa-solid fa-eye"></i>
+                </a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="project-overlay-btn" aria-label="View source code on GitHub">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <span class="project-category-badge">Kotlin</span>
+            </div>
+            <div class="project-body">
+              <h3 class="project-title">News Reader App</h3>
+              <p class="project-desc">
+                Personalised news aggregator consuming NewsAPI. Features offline caching,
+                bookmark system, dark mode, and search with Paging 3 for infinite scroll.
+              </p>
+              <div class="project-tech-tags">
+                <span class="badge">Kotlin</span>
+                <span class="badge">Paging 3</span>
+                <span class="badge">Room</span>
+                <span class="badge">NewsAPI</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── SECTION 7: TESTIMONIALS ─────────────────────────── -->
+    <section id="testimonials" class="section" aria-label="Client testimonials">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What They Say</span>
+          <h2 class="section-title">Testimonials</h2>
+          <p class="section-subtitle">Feedback from clients and colleagues I've worked with.</p>
+        </div>
+
+        <div class="testimonials-slider-wrap">
+
+          <div id="testimonials-track-outer" class="testimonials-track-outer">
+            <div id="testimonials-track" class="testimonials-track" role="region" aria-label="Testimonials slider" aria-live="polite">
+
+              <!-- Slide 1 -->
+              <article class="testimonial-slide glass-card" aria-label="Testimonial from Mohammed Al-Hassan">
+                <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+                <p class="testimonial-text">
+                  Ahmed delivered our e-commerce Android app on time and beyond expectations.
+                  His attention to detail, clean code structure, and proactive communication
+                  made the entire project a joy. Highly recommend him for any Android project.
+                </p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar-placeholder" aria-hidden="true">M</div>
+                  <div class="testimonial-author-info">
+                    <span class="testimonial-author-name">Mohammed Al-Hassan</span>
+                    <span class="testimonial-author-role">CEO, ShopEasy Egypt</span>
+                  </div>
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    ★★★★★
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 2 -->
+              <article class="testimonial-slide glass-card" aria-label="Testimonial from Sarah Khalil">
+                <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+                <p class="testimonial-text">
+                  Working with Ahmed was a pleasure. He has a strong grasp of Kotlin and
+                  Jetpack components, and his code is always well-structured and thoroughly documented.
+                  Our fitness app shipped with zero critical bugs — a testament to his quality standards.
+                </p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar-placeholder" aria-hidden="true">S</div>
+                  <div class="testimonial-author-info">
+                    <span class="testimonial-author-name">Sarah Khalil</span>
+                    <span class="testimonial-author-role">Product Manager, FitLife Co.</span>
+                  </div>
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    ★★★★★
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 3 -->
+              <article class="testimonial-slide glass-card" aria-label="Testimonial from Omar Farouk">
+                <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+                <p class="testimonial-text">
+                  Ahmed's technical skills are matched only by his professionalism.
+                  He understood our complex requirements quickly and built a scalable architecture
+                  that our in-house team could maintain easily. A true asset to any team.
+                </p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar-placeholder" aria-hidden="true">O</div>
+                  <div class="testimonial-author-info">
+                    <span class="testimonial-author-name">Omar Farouk</span>
+                    <span class="testimonial-author-role">CTO, TechBridge Solutions</span>
+                  </div>
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    ★★★★★
+                  </div>
+                </div>
+              </article>
+
+              <!-- Slide 4 -->
+              <article class="testimonial-slide glass-card" aria-label="Testimonial from Layla Mansour">
+                <div class="testimonial-quote-icon" aria-hidden="true">"</div>
+                <p class="testimonial-text">
+                  Ahmed transformed our idea into a polished Android app within weeks.
+                  He suggested improvements we hadn't even thought of, and the final result
+                  exceeded everything we envisioned. Will definitely hire again!
+                </p>
+                <div class="testimonial-author">
+                  <div class="testimonial-avatar-placeholder" aria-hidden="true">L</div>
+                  <div class="testimonial-author-info">
+                    <span class="testimonial-author-name">Layla Mansour</span>
+                    <span class="testimonial-author-role">Founder, NewsHub App</span>
+                  </div>
+                  <div class="testimonial-stars" aria-label="5 out of 5 stars">
+                    ★★★★★
+                  </div>
+                </div>
+              </article>
+
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="testimonials-controls" role="group" aria-label="Slider controls">
+            <button id="slider-prev" class="slider-arrow" aria-label="Previous testimonial">
+              <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+            </button>
+            <div id="slider-dots" class="slider-dots" role="group" aria-label="Slide indicators"></div>
+            <button id="slider-next" class="slider-arrow" aria-label="Next testimonial">
+              <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── SECTION 8: SERVICES ─────────────────────────────── -->
+    <section id="services" class="section" aria-label="Services offered">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">What I Offer</span>
+          <h2 class="section-title">Services</h2>
+          <p class="section-subtitle">End-to-end mobile development and technical support services.</p>
+        </div>
+
+        <div class="services-grid" role="list">
+
+          <!-- Service 1 -->
+          <article class="service-card glass-card reveal" data-delay="0" role="listitem" aria-label="Android App Development service">
+            <span class="service-number" aria-hidden="true">01</span>
+            <div class="service-icon-wrap" aria-hidden="true">🤖</div>
+            <h3 class="service-title">Android App Development</h3>
+            <p class="service-desc">
+              From concept to Play Store — building robust, scalable native Android applications
+              using Kotlin and modern Jetpack components.
+            </p>
+            <ul class="service-features" aria-label="Features">
+              <li class="service-feature">Kotlin / Java development</li>
+              <li class="service-feature">MVVM clean architecture</li>
+              <li class="service-feature">Jetpack Compose UI</li>
+              <li class="service-feature">Play Store publishing</li>
+            </ul>
+          </article>
+
+          <!-- Service 2 -->
+          <article class="service-card glass-card reveal" data-delay="100" role="listitem" aria-label="API Integration and Backend service">
+            <span class="service-number" aria-hidden="true">02</span>
+            <div class="service-icon-wrap" aria-hidden="true">🔗</div>
+            <h3 class="service-title">API Integration</h3>
+            <p class="service-desc">
+              Seamlessly connecting your Android app to any backend or third-party API
+              with Retrofit, OkHttp, and proper error handling strategies.
+            </p>
+            <ul class="service-features" aria-label="Features">
+              <li class="service-feature">RESTful API integration</li>
+              <li class="service-feature">Firebase backend</li>
+              <li class="service-feature">Offline-first caching</li>
+              <li class="service-feature">Secure authentication</li>
+            </ul>
+          </article>
+
+          <!-- Service 3 -->
+          <article class="service-card glass-card reveal" data-delay="200" role="listitem" aria-label="App Maintenance and Optimization service">
+            <span class="service-number" aria-hidden="true">03</span>
+            <div class="service-icon-wrap" aria-hidden="true">⚡</div>
+            <h3 class="service-title">App Optimisation</h3>
+            <p class="service-desc">
+              Auditing existing Android apps for performance bottlenecks, memory leaks,
+              and UI jank — delivering faster, smoother experiences.
+            </p>
+            <ul class="service-features" aria-label="Features">
+              <li class="service-feature">Performance profiling</li>
+              <li class="service-feature">Memory leak detection</li>
+              <li class="service-feature">Startup time reduction</li>
+              <li class="service-feature">Battery optimisation</li>
+            </ul>
+          </article>
+
+          <!-- Service 4 -->
+          <article class="service-card glass-card reveal" data-delay="300" role="listitem" aria-label="UI and UX Redesign service">
+            <span class="service-number" aria-hidden="true">04</span>
+            <div class="service-icon-wrap" aria-hidden="true">🎨</div>
+            <h3 class="service-title">UI / UX Implementation</h3>
+            <p class="service-desc">
+              Transforming Figma/Adobe XD designs into pixel-perfect Android UIs
+              using XML layouts, Material Design 3, and Jetpack Compose.
+            </p>
+            <ul class="service-features" aria-label="Features">
+              <li class="service-feature">Material Design 3</li>
+              <li class="service-feature">Pixel-perfect layouts</li>
+              <li class="service-feature">Animations &amp; transitions</li>
+              <li class="service-feature">Responsive for all screens</li>
+            </ul>
+          </article>
+
+          <!-- Service 5 -->
+          <article class="service-card glass-card reveal" data-delay="400" role="listitem" aria-label="Technical Consulting service">
+            <span class="service-number" aria-hidden="true">05</span>
+            <div class="service-icon-wrap" aria-hidden="true">💡</div>
+            <h3 class="service-title">Technical Consulting</h3>
+            <p class="service-desc">
+              Architecture reviews, technology stack decisions, and mentoring for teams
+              building or scaling their Android applications.
+            </p>
+            <ul class="service-features" aria-label="Features">
+              <li class="service-feature">Architecture review</li>
+              <li class="service-feature">Code quality auditing</li>
+              <li class="service-feature">Team mentoring</li>
+              <li class="service-feature">Tech stack planning</li>
+            </ul>
+          </article>
+
+          <!-- Service 6 -->
+          <article class="service-card glass-card reveal" data-delay="500" role="listitem" aria-label="Digital Support and Operations service">
+            <span class="service-number" aria-hidden="true">06</span>
+            <div class="service-icon-wrap" aria-hidden="true">🛡️</div>
+            <h3 class="service-title">Digital Support &amp; Ops</h3>
+            <p class="service-desc">
+              IT support, operations management, and technical documentation services
+              for enterprise and SME teams needing reliable tech assistance.
+            </p>
+            <ul class="service-features" aria-label="Features">
+              <li class="service-feature">L2 technical support</li>
+              <li class="service-feature">SOP documentation</li>
+              <li class="service-feature">IT asset management</li>
+              <li class="service-feature">Process optimisation</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── SECTION 9: CONTACT ──────────────────────────────── -->
+    <section id="contact" class="section" aria-label="Contact Ahmed Samy">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-label">Let's Talk</span>
+          <h2 class="section-title">Contact Me</h2>
+          <p class="section-subtitle">Have a project in mind? Let's build something great together.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Left: Info -->
+          <div class="contact-info reveal-left">
+            <h3 class="contact-heading">
+              Ready to build your <span>next Android app?</span>
+            </h3>
+            <p class="contact-text">
+              Whether you have a full project brief or just a rough idea,
+              I'd love to hear from you. Fill in the form or reach out directly —
+              I typically respond within 24 hours.
+            </p>
+
+            <div class="contact-details">
+              <a href="mailto:ahmedsamygamal6@gmail.com" class="contact-detail-item glass-card" aria-label="Email Ahmed Samy">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                </div>
+                <div class="contact-detail-body">
+                  <span class="contact-detail-label">Email</span>
+                  <span class="contact-detail-value">ahmedsamygamal6@gmail.com</span>
+                </div>
+              </a>
+
+              <a href="tel:+201208901836" class="contact-detail-item glass-card" aria-label="Call Ahmed Samy">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                </div>
+                <div class="contact-detail-body">
+                  <span class="contact-detail-label">Phone</span>
+                  <span class="contact-detail-value">(+20) 01208901836</span>
+                </div>
+              </a>
+
+              <div class="contact-detail-item glass-card" aria-label="Ahmed's location">
+                <div class="contact-detail-icon" aria-hidden="true">
+                  <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                </div>
+                <div class="contact-detail-body">
+                  <span class="contact-detail-label">Location</span>
+                  <span class="contact-detail-value">Nasr City, Cairo 🇪🇬</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social links -->
+            <div class="contact-socials" aria-label="Social media links">
+              <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="GitHub">
+                <i class="fa-brands fa-github" aria-hidden="true"></i>
+              </a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="LinkedIn">
+                <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a href="mailto:ahmedsamygamal6@gmail.com" class="contact-social-link" aria-label="Email">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+              <a href="https://wa.me/201208901836" target="_blank" rel="noopener noreferrer" class="contact-social-link" aria-label="WhatsApp">
+                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Form -->
+          <div class="contact-form-wrap glass-card reveal-right">
+
+            <form id="contact-form" class="contact-form" novalidate aria-label="Contact form">
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label class="form-label" for="contact-name">Full Name</label>
+                  <input
+                    type="text"
+                    id="contact-name"
+                    name="name"
+                    class="form-input"
+                    placeholder="Your name"
+                    required
+                    autocomplete="name"
+                    aria-required="true"
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label" for="contact-email">Email Address</label>
+                  <input
+                    type="email"
+                    id="contact-email"
+                    name="email"
+                    class="form-input"
+                    placeholder="you@example.com"
+                    required
+                    autocomplete="email"
+                    aria-required="true"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-subject">Subject</label>
+                <input
+                  type="text"
+                  id="contact-subject"
+                  name="subject"
+                  class="form-input"
+                  placeholder="Project discussion / Collaboration / Other"
+                  aria-required="false"
+                />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="contact-message">Message</label>
+                <textarea
+                  id="contact-message"
+                  name="message"
+                  class="form-textarea"
+                  placeholder="Tell me about your project or idea…"
+                  required
+                  aria-required="true"
+                ></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary form-submit" id="contact-submit-btn">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send Message
+              </button>
+
+            </form>
+
+            <!-- Success state -->
+            <div id="form-success" class="form-success" role="status" aria-live="polite">
+              <div class="form-success-icon">🎉</div>
+              <p class="form-success-msg">Message sent! I'll get back to you within 24 hours.</p>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       FOOTER
+       ════════════════════════════════════════════════════════════ -->
+  <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#home" class="footer-logo" aria-label="Ahmed Samy — Back to top">Ahmed Samy</a>
+          <p class="footer-tagline">
+            Technical Support &amp; Operations Specialist | Android Mobile App Developer.
+          </p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a href="https://github.com"   target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+            <a href="mailto:ahmedsamygamal6@gmail.com" class="footer-social-link" aria-label="Email"><i class="fa-solid fa-envelope" aria-hidden="true"></i></a>
+            <a href="https://wa.me/201208901836" target="_blank" rel="noopener noreferrer" class="footer-social-link" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <!-- Quick links -->
+        <nav aria-label="Footer quick links">
+          <h4 class="footer-col-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home"       class="footer-link">Home</a></li>
+            <li><a href="#about"      class="footer-link">About</a></li>
+            <li><a href="#education"  class="footer-link">Education</a></li>
+            <li><a href="#experience" class="footer-link">Experience</a></li>
+          </ul>
+        </nav>
+
+        <!-- Services links -->
+        <nav aria-label="Footer services links">
+          <h4 class="footer-col-title">Services</h4>
+          <ul class="footer-links">
+            <li><a href="#services" class="footer-link">Technical Support</a></li>
+            <li><a href="#services" class="footer-link">Android Development</a></li>
+            <li><a href="#services" class="footer-link">Quality &amp; Coaching</a></li>
+            <li><a href="#services" class="footer-link">Operations Support</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact links -->
+        <div>
+          <h4 class="footer-col-title">Contact</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:ahmedsamygamal6@gmail.com" class="footer-link">ahmedsamygamal6@gmail.com</a></li>
+            <li><a href="tel:+201208901836"           class="footer-link">(+20) 01208901836</a></li>
+            <li><a href="#contact"                    class="footer-link">Send a Message</a></li>
+            <li><span class="footer-link" style="cursor:default;">Nasr City, Cairo 🇪🇬</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p class="footer-copy">
+          &copy; <span id="footer-year"></span> <span>Ahmed Samy</span>. All rights reserved.
+        </p>
+        <p class="footer-made-with">
+          Made with
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          in Egypt &mdash; Android &amp; Kotlin
+        </p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ════════════════════════════════════════════════════════════
+       JAVASCRIPT — loaded in correct dependency order
+       ════════════════════════════════════════════════════════════ -->
+  <script src="assets/js/loader.js"></script>
+  <script src="assets/js/stars-background.js"></script>
+  <script src="assets/js/custom-cursor.js"></script>
+  <script src="assets/js/theme-toggle.js"></script>
+  <script src="assets/js/typing-effect.js"></script>
+  <script src="assets/js/scroll-reveal.js"></script>
+  <script src="assets/js/skills-animation.js"></script>
+  <script src="assets/js/mobile-nav.js"></script>
+  <script src="assets/js/active-nav-link.js"></script>
+  <script src="assets/js/testimonials-slider.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>

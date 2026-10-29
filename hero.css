@@ -1,0 +1,307 @@
+/* ============================================================
+   hero.css — Hero / Home Section
+   ============================================================ */
+
+#home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--navbar-height);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Radial glow backdrop ── */
+#home::before {
+  content: '';
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(ellipse at center,
+    rgba(33, 150, 243, 0.12) 0%,
+    rgba(70, 71, 174, 0.08) 50%,
+    transparent 70%
+  );
+  pointer-events: none;
+  animation: heroGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes heroGlow {
+  from { opacity: 0.7; transform: translateX(-50%) scale(1); }
+  to   { opacity: 1;   transform: translateX(-50%) scale(1.1); }
+}
+
+/* ── Layout ── */
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: var(--space-2xl);
+  width: 100%;
+}
+
+/* ── Left: Text content ── */
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.hero-greeting {
+  font-size: var(--text-lg);
+  color: var(--blue-light);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+}
+
+.hero-greeting::before {
+  content: '';
+  width: 36px;
+  height: 2px;
+  background: var(--gradient-main);
+  border-radius: var(--radius-full);
+}
+
+.hero-name {
+  font-size: clamp(var(--text-4xl), 6vw, var(--text-6xl));
+  font-family: var(--font-display);
+  font-weight: var(--weight-black);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Gradient on the first name */
+.hero-name .highlight {
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Typing wrapper ── */
+.hero-roles-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-size: clamp(var(--text-xl), 2.5vw, var(--text-3xl));
+  font-weight: var(--weight-semibold);
+  color: var(--text-secondary);
+  min-height: 2.5rem;
+}
+
+.hero-roles-prefix {
+  color: var(--text-muted);
+  font-weight: var(--weight-normal);
+  white-space: nowrap;
+}
+
+.typing-text {
+  color: var(--blue-light);
+  position: relative;
+  white-space: nowrap;
+}
+
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.1em;
+  background: var(--blue);
+  margin-left: 3px;
+  border-radius: 2px;
+  vertical-align: middle;
+  animation: blink 0.8s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+.hero-tagline {
+  font-size: var(--text-sm);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: var(--weight-medium);
+  padding: 0.4rem 1rem;
+  border: var(--border-glass);
+  border-radius: var(--radius-full);
+  display: inline-block;
+  background: var(--bg-glass);
+  width: fit-content;
+}
+
+.hero-bio {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  max-width: 520px;
+  line-height: 1.8;
+}
+
+/* ── CTA Buttons ── */
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  align-items: center;
+}
+
+/* ── Social icons row ── */
+.hero-socials {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
+.hero-socials a {
+  width: 42px;
+  height: 42px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-glass);
+  border: var(--border-glass);
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  transition: all var(--transition-spring);
+  text-decoration: none;
+}
+
+.hero-socials a:hover {
+  background: var(--gradient-main);
+  color: #fff;
+  transform: translateY(-4px);
+  border-color: transparent;
+  box-shadow: var(--glow-blue);
+}
+
+/* ── Stat pills ── */
+.hero-stats {
+  display: flex;
+  gap: var(--space-md);
+  flex-wrap: wrap;
+  margin-top: var(--space-sm);
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-stat-num {
+  font-size: var(--text-3xl);
+  font-weight: var(--weight-black);
+  font-family: var(--font-display);
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1;
+}
+
+.hero-stat-label {
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 2px;
+}
+
+/* ── Right: Profile image ── */
+.hero-image-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Rotating ring */
+.hero-image-wrap::before {
+  content: '';
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: var(--radius-full);
+  border: 2px dashed rgba(33, 150, 243, 0.3);
+  animation: rotateSlow 20s linear infinite;
+}
+
+/* Glow blob */
+.hero-image-wrap::after {
+  content: '';
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: var(--radius-full);
+  background: radial-gradient(circle, rgba(70,71,174,0.35) 0%, transparent 70%);
+  filter: blur(30px);
+}
+
+@keyframes rotateSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.hero-photo-frame {
+  position: relative;
+  z-index: 2;
+  width: 280px;
+  height: 280px;
+  border-radius: var(--radius-full);
+  padding: 4px;
+  background: var(--gradient-main);
+  box-shadow: var(--glow-blue), var(--glow-violet);
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-16px); }
+}
+
+.hero-photo-frame img {
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-full);
+  object-fit: cover;
+  object-position: top center;
+  border: 3px solid var(--bg-primary);
+}
+
+/* ── Scroll hint indicator ── */
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  animation: bounceDown 2s ease infinite;
+}
+
+.hero-scroll-hint svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--blue);
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
+  50%       { transform: translateX(-50%) translateY(8px); opacity: 1; }
+}

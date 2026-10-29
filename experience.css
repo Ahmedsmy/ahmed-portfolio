@@ -1,0 +1,153 @@
+/* ============================================================
+   experience.css — Work Experience Section
+   ============================================================ */
+
+#experience {
+  background: var(--bg-secondary);
+}
+
+/* ── Alternating timeline ── */
+.exp-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+/* Center vertical line */
+.exp-timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--blue), var(--violet), transparent);
+}
+
+/* ── Single experience entry ── */
+.exp-item {
+  display: grid;
+  grid-template-columns: 1fr 60px 1fr;
+  gap: 0 var(--space-lg);
+  align-items: flex-start;
+}
+
+/* ── Center dot ── */
+.exp-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-main);
+  box-shadow: var(--glow-blue);
+  position: relative;
+  z-index: 1;
+  margin-top: 20px;
+  justify-self: center;
+  animation: pulse-dot 2s ease-in-out infinite;
+}
+
+.exp-dot::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(33,150,243,0.4);
+  animation: ring-expand 2s ease-in-out infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.2); }
+}
+
+@keyframes ring-expand {
+  0%   { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+/* ── Card (shared) ── */
+.exp-card {
+  padding: var(--space-xl);
+}
+
+/* Odd items: card on left, right column empty */
+.exp-item:nth-child(odd) .exp-card   { grid-column: 1; }
+.exp-item:nth-child(odd) .exp-dot    { grid-column: 2; }
+.exp-item:nth-child(odd) .exp-empty  { grid-column: 3; }
+
+/* Even items: left empty, card on right */
+.exp-item:nth-child(even) .exp-empty { grid-column: 1; }
+.exp-item:nth-child(even) .exp-dot   { grid-column: 2; }
+.exp-item:nth-child(even) .exp-card  { grid-column: 3; }
+
+.exp-role {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.exp-company {
+  font-size: var(--text-base);
+  font-weight: var(--weight-semibold);
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-sm);
+}
+
+.exp-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.exp-meta-tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--text-xs);
+  color: var(--text-muted);
+}
+
+.exp-meta-tag svg {
+  width: 12px;
+  height: 12px;
+  stroke: var(--blue);
+}
+
+.exp-bullets {
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.exp-bullets li {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.exp-bullets li::before {
+  content: '▸';
+  color: var(--blue);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-md);
+}

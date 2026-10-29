@@ -1,0 +1,122 @@
+/* ============================================================
+   education.css — Education Section
+   ============================================================ */
+
+#education {
+  background: var(--bg-primary);
+}
+
+/* ── Timeline wrapper ── */
+.edu-timeline {
+  position: relative;
+  max-width: 800px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+/* Central vertical line */
+.edu-timeline::before {
+  content: '';
+  position: absolute;
+  left: 28px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--blue), var(--violet), transparent);
+}
+
+/* ── Single timeline item ── */
+.edu-item {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: var(--space-lg);
+  align-items: flex-start;
+}
+
+/* Circular icon on the line */
+.edu-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-full);
+  background: var(--gradient-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: #fff;
+  box-shadow: var(--glow-blue);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+  transition: transform var(--transition-spring);
+}
+
+.edu-item:hover .edu-icon {
+  transform: scale(1.15) rotate(-5deg);
+}
+
+/* Card body */
+.edu-card {
+  padding: var(--space-xl);
+  position: relative;
+}
+
+/* Arrow pointing to the line */
+.edu-card::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 18px;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid rgba(13, 20, 50, 0.55);
+}
+
+.edu-degree {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.edu-institution {
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  background: var(--gradient-main);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--space-sm);
+}
+
+.edu-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.edu-meta-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+}
+
+.edu-meta-item svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--blue);
+  flex-shrink: 0;
+}
+
+.edu-desc {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
